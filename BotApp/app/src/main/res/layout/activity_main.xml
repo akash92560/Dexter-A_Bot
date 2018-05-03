@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        android:src="@drawable/ic_send"
+        android:id="@+id/fab"
+        android:backgroundTint="@color/colorPrimary"
+        android:tint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlCompat" android:focusable="true" />
+
+    <ListView
+        android:layout_above="@+id/fab"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/list_of_message"
+        android:layout_marginBottom="20dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    <EditText
+        android:id="@+id/user_message"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@+id/fab"
+        android:hint="@string/enter_your_message" />
+
+    <android.support.design.widget.FloatingActionButton
+       android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+       android:id="@+id/voice"
+
+app:backgroundTint="@color/colorPrimary"
+        android:layout_alignTop="@+id/fab"
+        android:layout_toStartOf="@+id/fab"
+
+        android:src="@drawable/ic_action_name"
+
+        tools:ignore="RtlCompat" />
+</RelativeLayout>
